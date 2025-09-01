@@ -1,0 +1,377 @@
+/* Global Styles */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+  --light-text-color: #fff;
+  --accent-color: #ffc107;
+  --font-family: 'Cairo', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: #fff;
+  color: var(--text-color);
+  direction: rtl;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* Header */
+.main-header {
+  background: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav ul li {
+  margin-right: 20px;
+}
+
+.main-nav a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--accent-color);
+}
+
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  color: var(--light-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--text-color);
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ffca2c;
+  transform: scale(1.05);
+}
+
+/* Destinations Section */
+#destinations {
+  padding: 4rem 0;
+  background-color: var(--secondary-color);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.destination-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.card-content p {
+  font-size: 1rem;
+}
+
+/* Why Choose Us Section */
+#why-choose-us {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.feature-card {
+  padding: 2rem;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-right: 5px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.testimonial-card .name {
+    text-align: left;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.testimonial-card .rating {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+/* Newsletter CTA Section */
+#newsletter {
+    background: var(--text-color);
+    color: var(--light-text-color);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#newsletter h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#newsletter p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#newsletter input[type="email"] {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: var(--font-family);
+}
+
+#newsletter .btn {
+    white-space: nowrap;
+}
+
+
+/* Footer */
+.main-footer {
+  background: var(--text-color);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.whatsapp-contact {
+    color: #ccc;
+}
+
+
+/* WhatsApp FAB */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 25px;
+    left: 25px; /* For RTL layout */
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1001;
+}
+
+.whatsapp-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-fab svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-header .container {
+        flex-direction: column;
+    }
+
+    .main-header .logo {
+        margin-bottom: 1rem;
+    }
+
+    .main-nav ul {
+        padding: 0;
+    }
+    
+    #newsletter form {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    #newsletter input[type="email"] {
+        width: 100%;
+    }
+
+    #newsletter .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .whatsapp-fab {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .whatsapp-fab svg {
+        width: 24px;
+        height: 24px;
+    }
+}
